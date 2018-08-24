@@ -1,6 +1,7 @@
 package person.zhc.findme.view
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import kotlinx.android.synthetic.main.activity_login.*
@@ -29,7 +30,10 @@ class LoginActivity : Activity() {
 
     fun initEvents(){
         signInBtn.setOnClickListener(View.OnClickListener {
-
+            val intent = Intent();
+            intent.setClass(this,MapActivity::class.java);
+            startActivity(intent);
+            finish();
         })
     }
 }
